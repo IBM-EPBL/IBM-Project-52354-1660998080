@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Handwritten Digit Recognition System</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js"></script>
+    <style>
+        body{
+            background-image:url("../static/images/twobg.jpg");
+            background-repeat:no-repeat;
+            background-position:bottom;
+        }
+    </style>
+</head>
+<body>
+    <span id="loader">
+        <img src="../static/loading.gif">
+    </span>
+    <span id="content">
+    <div class="header">
+        <p><a href="/">Home</a><a href="/upload">Recognize</a></p>
+    </div>
+    <h2><strong>Digit Recognition</strong></h2>
+    <div class="container">
+    <span>
+    <form class="form" action="/predict" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" id="upload" style="display:none"  accept="image/x-png,image/jpeg" required>
+    <label for="upload" class="upload">Choose</label>
+    <input type='submit' class="recognize" value="Recognize" id="submit">
+    <p id="status"></p>
+    </form>
+    </span>
+    <div><h3>Recognized digit: {{digit}}</h3>
+        <h4>Probability: {{percentage}}</h4>
+        <img src="{{ user_image }}" alt="User Image" class="user-image"></div>
+    </div>
+    </span>
+</body>
+</html>
