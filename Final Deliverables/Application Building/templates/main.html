@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Handwritten Digit Recognition System</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <style>
+            body{
+                background-image:url("../static/images/onebg.jpg");
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                document.getElementById("loader").style.display="none";
+                document.getElementById("content").style.visibility="visible";
+            }
+        </script>
+    </head>
+<body>
+    <span id="loader">
+        <img src="../static/loading.gif">
+    </span>
+    <span id="content">
+    <div class="header">
+        <p><a href="/">Home</a><a href="/upload">Recognize</a></p>
+    </div>
+    <h1>Handwritten Recognition System</h1>
+    <p class="introduction">Handwritten Text Recognition is a Technology that is much needed in this world as of today.
+        The digit recognition system is used to recognize the digits from different sources like email, bank cheque, papers, images, etc.
+        Before proper implementation of this technology we have relied on writting texts with our own hands which can result in errors.
+        It's diffcult to store and access physical data with effiecieny.
+        The project presents recognizing the handwritten digits (0 to 9) from the famous MNIST dataset.
+        Here we will be using artificial neural networks convolution neural networks.
+    </p>
+    </span>
+</body>
+</html>
